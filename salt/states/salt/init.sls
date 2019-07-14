@@ -6,4 +6,4 @@ salt-minion:
     - source: salt://salt/files/etc/salt/minion.d
     - user: root
     - group: root
-    - mode: 0644
+    - file_mode: 0644
