@@ -9,8 +9,6 @@ salt-minion:
     - file_mode: 0644
 
 salt-minion service:
-  service.running:
+  service.dead:
     - name: salt-minion
     - enable: False # no need to enable for local usage
-    - watch:
-      - file: /etc/salt/minion.d
