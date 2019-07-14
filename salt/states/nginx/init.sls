@@ -7,7 +7,7 @@ nginx:
     - mode: 0644
     - group: root
     - contents:
-      - "line 1"
+      - {% salt.pillar.get('wwwdata:index:line1') %}
 
 nginx service restart:
   service.running:
