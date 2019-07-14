@@ -1,2 +1,3 @@
-www-data:
-  index: "This is test!"
+wwwdata:
+  index:
+    line1: "This is test!"
