@@ -21,6 +21,14 @@ file_roots:
     - /srv/salt/states
 ```
 
+### Setup states from git repository
+
+Clone git repository.
+`sudo git clone https://github.com/tjkt/saltstack-nginx.git`
+
+Make symbolic link to salt file_roots base folder.
+`sudo ln -s saltstack-nginx/salt /srv/salt`
+
 ## Run local salt-states
 
 Install and configure nginx state
