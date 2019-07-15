@@ -1,22 +1,21 @@
 nginx:
   pkg.latest
 
-www-user:
- user.present
+www-data:
+ user.present:
+   - groups:
+     - www-data
  
-www-group:
-  group.present
-
 /var/www/html:
   file.directory:
-    - user: www-user
-    - group: www-group
-    - mode: 0444
+    - user: www-data
+    - group: www-data
+    - mode: 0755
 
 /var/www/html/index.html:
   file.managed:
     - user: www-user
-    - mode: 0444
+    - mode: 0644
     - group: www-group
     - contents:
       - Hello All!
