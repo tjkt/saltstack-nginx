@@ -7,7 +7,7 @@ nginx:
     - mode: 0644
     - group: root
     - contents:
-      - {{ salt.pillar.get('wwwdata:index:line1') }}
+      - Example www site with nginx
 
 nginx service restart:
   service.running:
