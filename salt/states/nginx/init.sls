@@ -17,7 +17,7 @@ www-group:
   file.managed:
     - user: www-user
     - mode: 0444
-    - group: root
+    - group: www-group
     - contents:
       - Hello All!
 
